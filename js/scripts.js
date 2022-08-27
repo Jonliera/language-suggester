@@ -1,30 +1,80 @@
-window.onload = function() {
-  const form = document.querySelector("form");
-  form.onsubmit = function (event){
-    event.preventDefault();
-
-
-
-let html = document.getElementById("html");
-html.setAttribute("class", "hidden");
-let css = document.getElementById("css");
-css.setAttribute("class", "hidden");
-let javascript = document.getElementById("javascript")
-javascript.setAttribute("class", "hidden");
-
-
-const focus = document.querySelector("input[name='focus']:checked");
-const patterns = document.querySelector("input[name='patterns']:checked");
-const solve = document.querySelector("input[name='solve']:solve");
-const puzzle = document.querySelector("input[name='puzzle']:checked");
-const details = document.querySelector("input[name='details']:checked");
-
-
-
-if (focus === design && patterns === bad) {
-  document.getElementById("html").removeAttribute("class");
-} else if ( focus === || height >= 48) {
-  document.getElementById("css").removeAttribute("class");
-} else if (age >= 6) {
-  document.getElementById("javascript").removeAttribute("class");
+function hideResults() {
+  document.getElementById('html').setAttribute('class', 'hidden');
+  document.getElementById('css').setAttribute('class', 'hidden');
+  document.getElementById('javascript').setAttribute('class', 'hidden');
 }
+
+function getResult(name) {
+  const el = document.querySelector("input[name='" + name + "']:checked");
+  if (!el) {
+    console.error('Could not find input with name: ' + name);
+    return;
+  }
+  return el.value;
+}
+
+function getResults() {
+  return {
+    focus: getResult('focus'),
+    patterns: getResult('patterns'),
+    solve: getResult('solve'),
+    puzzle: getResult('puzzle'),
+    details: getResult('details'),
+  };
+}
+
+// returns html, css, or js
+function determineLanguage(results) {
+  //design, text, func
+  const focus = results.focus;
+  // good, bad, what
+  const patterns = results.patterns;
+  //love, terr,joke
+  const solve = results.solve;
+  //yay, yuck, five
+  const puzzle = results.puzzle;
+  //abs, big, say
+  const details = results.details;
+
+  if (focus === 'design' && patterns === 'bad') {
+    return 'css';
+  }
+  if (focus === 'text' && solve === 'joke') {
+    return 'html';
+  }
+  if (puzzle === 'yay' && details === 'big') {
+    return 'javascript';
+  }
+  if (details === 'good' && solve === 'design') {
+    return 'css';
+  }
+}
+
+window.onload = function () {
+  const form = document.querySelector('#language-questions');
+  if (!form) {
+    console.error('Could not find form');
+    return;
+  }
+  form.onsubmit = function (event) {
+    event.preventDefault();
+    hideResults();
+    // const { details, focus, patterns, puzzle, solve } = getResults();
+
+    const results = getResults();
+    console.log('form submit results', results);
+
+    const language = determineLanguage(results);
+    console.log('language', language)
+    if (language === 'html') {
+      document.getElementById('html').removeAttribute('class');
+    }
+    if (language === 'css') {
+      document.getElementById('css').removeAttribute('class');
+    }
+    if (language === 'javascript') {
+      document.getElementById('javascript').removeAttribute('class');
+    }
+  };
+};
+
