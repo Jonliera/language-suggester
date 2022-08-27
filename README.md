@@ -13,7 +13,7 @@
 
 ## Description
 
-_This project uses a simple survery form to obtain data and return a type of language that they would be interestes in studying first. All answers are branches . Here is a [link]https://jonliera.github.io/Language-Suggestor/_
+_This project uses a simple survery form to obtain data and return a type of language that they would be interested in studying first. All answers are branches . Here is a [link]https://jonliera.github.io/Language-Suggestor/_
 
 ## Setup/Installation Requirements
 

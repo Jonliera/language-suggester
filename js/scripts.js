@@ -5,8 +5,8 @@ function hideResults() {
 }
 
 function getResult(name) {
-  const el = document.querySelector("input[name='" + name + "']:checked");
-  return el.value;
+  const element = document.querySelector("input[name='" + name + "']:checked");
+  return element.value;
 }
 
 function getResults() {
@@ -66,13 +66,11 @@ window.onload = function () {
   form.onsubmit = function (event) {
     event.preventDefault();
     hideResults();
-    // const { details, focus, patterns, puzzle, solve } = getResults();
-
+  
     const results = getResults();
-    console.log('form submit results', results);
-
+  
     const language = determineLanguage(results);
-    console.log('language', language)
+   
     if (language === 'html') {
       document.getElementById('html').removeAttribute('class');
     }
