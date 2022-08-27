@@ -6,64 +6,88 @@
   <title>Programming Language Suggester</title>
 </head>
 <body>
+  <div id ="intro">
   <h1>Welcome to Programming 101</h1>
   <p class="welcome">In this page you will find out more about basic programming languages. As you may know there are many languages to learn. This might be a little overwhelming at some point. So that's why we decided to build this site just for you. We were all beginners at some point. This site will help you decide which language you should learn first. We are  going to ask you a few questions about yourself to match you with the best option for you.</p><br>
+  </div>
+  <div id ="container">
+  <div class="form-wrap">
+    <h2>Please select what best matches your personality on the survey below</h2>
+    <form id="language-questions">
+      <div class ="form-group">
+        <p><strong>1.- What do you focus more on when looking at a Webpage?</strong></p>
+        <input type="radio" name="focus" value="design" id="design" checked>
+        <label for="design">Design</label><br>
+        <input type="radio" name="focus" value="text" id="text">
+        <label for="text">Text</label><br>
+        <input type="radio" name="focus" value="func" id="func">
+        <label for="func">Functionality</label><br>
+      </div>
+      
+      <div class ="form-group">
+        <p><strong>2.- How good are you with patterns? ?</p></strong>
+        <input type="radio" name="patterns" value="good" id="good" checked>
+        <label for="good">Good</label><br>
+        <input type="radio" name="patterns" value="bad" id="bad">
+        <label for="bad">Bad</label><br>
+        <input type="radio" name="patterns" value="what" id="what">
+        <label for="what">What are patterns?</label><br>
+      </div>
+      
+      <div class ="form-group">
+        <p><strong>3.- Do you like solving problems?</p></strong>
+        <input type="radio" name="solve" value="love" id="love" checked>
+        <label for="love">Love</label><br>
+        <input type="radio" name="solve" value="terr" id="terr">
+        <label for="terr">Terrible</label><br>
+        <input type="radio" name="solve" value="joke" id="joke">
+        <label for="joke">Wiat, you're joking, right?</label><br>
+      </div>
+      
+      <div class ="form-group">
+        <p><strong>4.- Do you like solving puzzles?</p></strong>
+        <input type="radio" name="puzzle" value="yay" id="yay" checked>
+        <label for="yay">Yaaaay</label><br>
+        <input type="radio" name="puzzle" value="yuck" id="yuck">
+        <label for="yuck">Yuck</label><br>
+        <input type="radio" name="puzzle" value="five" id="five">
+        <label for="five">What are we? Five?</label><br>
+      </div>
+      
+      <div class ="form-group">
+        <p><strong>5.- Are you good with details?</p></strong>
+        <input type="radio" name="details" value="abs" id="abs" checked>
+        <label for="abs">Absolutely</label><br>
+        <input type="radio" name="details" value="big" id="big">
+        <label for="big">Not really, I like to look at the bigger picture</label><br>
+        <input type="radio" name="details" value="say" id="say">
+        <label for="say">Say what tails?</label><br><br>
+      </div>
+      <button type="submit" class="btn">Click here for results <br>(scroll down to see results)</button>
+    </form>
+  </div>
+  </div>
 
-  <h2>Please choose select what best matches your personality on the survey below.</h2>
-
-  <form id="language-questions">
-    <p>1.- What do you focus more on when looking at a Webpage?</p>
-    <input type="radio" name="focus" value="design" id="design" checked>
-    <label for="design">Design</label><br>
-    <input type="radio" name="focus" value="text" id="text">
-    <label for="text">Text</label><br>
-    <input type="radio" name="focus" value="func" id="func">
-    <label for="func">Functionality</label><br>
-    
-    <p>2.- How good are you with patterns? ?</p>
-    <input type="radio" name="patterns" value="good" id="good" checked>
-    <label for="good">Good</label><br>
-    <input type="radio" name="patterns" value="bad" id="bad">
-    <label for="bad">Bad</label><br>
-    <input type="radio" name="patterns" value="what" id="what">
-    <label for="what">What are patterns?</label><br>
-    
-    <p>3.- Do you like solving problems?</p>
-    <input type="radio" name="solve" value="love" id="love" checked>
-    <label for="love">Love</label><br>
-    <input type="radio" name="solve" value="terr" id="terr">
-    <label for="terr">Terrible</label><br>
-    <input type="radio" name="solve" value="joke" id="joke">
-    <label for="joke">Wiat, you're joking, right?</label><br>
-    
-    <p>4.- Do you like solving puzzles?</p>
-    <input type="radio" name="puzzle" value="yay" id="yay" checked>
-    <label for="yay">Yaaaay</label><br>
-    <input type="radio" name="puzzle" value="yuck" id="yuck">
-    <label for="yuck">Yuck</label><br>
-    <input type="radio" name="puzzle" value="five" id="five">
-    <label for="five">What are we? Five?</label><br>
-    
-    <p>5.- Are you good with details?</p>
-    <input type="radio" name="details" value="abs" id="abs" checked>
-    <label for="abs">Absolutely</label><br>
-    <input type="radio" name="details" value="big" id="big">
-    <label for="big">Not really, I like to look at the bigger picture</label><br>
-    <input type="radio" name="details" value="say" id="say">
-    <label for="say">Say what tails?</label><br><br>
-    <button type="submit">Click here for results</button>
-  </form>
-
+  <div class="results">
   <div id="html" class="hidden">
-    <h3>The Fabolous road starts with HTML</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur itaque sapiente nihil reiciendis delectus dolore ipsa quae eaque odit, voluptates aliquam. Necessitatibus consectetur maiores explicabo natus facere voluptas ipsam. Vel.</p>
+    <h3>The Faboulous HTML</h3>
+    <p>It all starts here. HTML is the most basic language and the best option to star with</p>
   </div>  
+  
   <div id="css" class="hidden">
-    <h3>Oh Yeah!! CSSS or as we like to call it :Design, Design ,Design</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur itaque sapiente nihil reiciendis delectus dolore ipsa quae eaque odit, voluptates aliquam. Necessitatibus consectetur maiores explicabo natus facere voluptas ipsam. Vel.</p>
+    <h3>CSSS or as we like to call it :Design, Design ,Design</h3>
+    <p>You are going to love it.CSS is the language we use to style an HTML document.
+    CSS describes how HTML elements should be displayed.</p>
   </div>    
+  
   <div id="javascript" class="hidden">
     <h3>Jvascript, more like, you want things to do stuff</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur itaque sapiente nihil reiciendis delectus dolore ipsa quae eaque odit, voluptates aliquam. Necessitatibus consectetur maiores explicabo natus facere voluptas ipsam. Vel.</p>
+    <p>Hell yeah! Javascript.</p>
+  </div>
+  </div>
+  <footer>
+    <p>Sign up for more awesome stuff!!! <a href="#">  Register here </a></p>
+  </footer>
+  </div>
 </body>
 </html>

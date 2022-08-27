@@ -1,65 +1,103 @@
-body{
-  background-color:rgb(209, 204, 194);
+.hidden {
+  display: none;
 }
 
-.welcome{
+* { 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background: #a3c6d9;
+}
+
+#intro h1{
+  font-size: 60px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+#intro p{
   font-size: 30px;
   margin-bottom: 50px;
   margin-left: 80px;
   margin-right: 100px;
-  color: rgb(10, 68, 104);
+  color: rgb(0, 0, 0);
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.fit{
-  font-size: 24px;
-  margin-left: 30px;
-  font-family: Arial, Helvetica, sans-serif;
+#container{
+  margin: 30px auto;
+  max-width: 80%;
+  padding: 30px;
+  line-height: 2;
 }
 
-h1{
-  font-size: 60px;
-  font-family: Arial, Helvetica, sans-serif;
+a{
+  text-decoration: none;
+}
+
+.form-wrap{
+  background: #fff;
+  padding: 15px 25px;
+  color: #333;
+  border: solid #f0e808 ;
+}
+
+.form-wrap p{
+  font-size: 23px;
+  font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+.form-wrap h2{
   text-align: center;
-  }
-
-p{
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: justify;
-  font-size: 25px;
+  font-size: 30px;
 }
 
-h2{ 
-  font-size: 40px;
-  font-family: Arial, Helvetica, sans-serif;
+.form-wrap .form-group{
+  margin-top: 15px;
+  color: rgb(5, 14, 4);
+}
+
+.form-wrap button{
+  background: #49c1a2;
+  width: 60%;
+  display: block;
+  padding: 20px;
+  margin-left: 250px;
+  margin-bottom: 30px;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.form-wrap button:hover{
+  background-color: #586b94;
+}
+
+.results h3{
+  font-size: 30px;
   text-align: center;
+  margin-bottom: 20px;
+  color: #06215d;
 }
 
-.hidden {
-  display: none;
-}
-form{
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 20px;
-  border: solid black;
-  padding: 10px;
-  background-color: rgba(189, 202, 206, 0.718);
-  margin-top: 80px;
-  margin-left: 80px;
-  margin-right: 80px;
-  font-weight: 150;
-  line-height: 40px;
-  font-weight: 5;
+.results p{
+  font-size: 23px;
+  margin: 40px 400px 20px 450px;
 }
 
-button{
-  font-size:40px;
-  background-color: aquamarine;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-h3{
-  font-size: 40px;
+footer{
   text-align: center;
-  color: green;
+  margin-top: 200px;
+  font-size: 35px;
+  margin-bottom: 300px;
+}
+
+footer a{
+  color: #f02308;
 }

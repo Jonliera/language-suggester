@@ -6,10 +6,6 @@ function hideResults() {
 
 function getResult(name) {
   const el = document.querySelector("input[name='" + name + "']:checked");
-  if (!el) {
-    console.error('Could not find input with name: ' + name);
-    return;
-  }
   return el.value;
 }
 
@@ -67,10 +63,6 @@ function determineLanguage(results) {
 
 window.onload = function () {
   const form = document.querySelector('#language-questions');
-  if (!form) {
-    console.error('Could not find form');
-    return;
-  }
   form.onsubmit = function (event) {
     event.preventDefault();
     hideResults();
