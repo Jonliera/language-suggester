@@ -70,7 +70,7 @@ window.onload = function () {
     const results = getResults();
   
     const language = determineLanguage(results);
-   
+    
     if (language === 'html') {
       document.getElementById('html').removeAttribute('class');
     }
