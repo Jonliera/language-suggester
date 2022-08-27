@@ -36,17 +36,32 @@ function determineLanguage(results) {
   //abs, big, say
   const details = results.details;
 
+  if (focus === 'design' && patterns === 'good') {
+    return 'css';
+  }
   if (focus === 'design' && patterns === 'bad') {
     return 'css';
   }
-  if (focus === 'text' && solve === 'joke') {
+  if (focus === 'design' && patterns === 'what') {
+    return 'css';
+  }
+  if (focus === 'text' && patterns === 'good') {
     return 'html';
   }
-  if (puzzle === 'yay' && details === 'big') {
+  if (focus === 'text' && patterns === 'bad') {
+    return 'html';
+  }
+  if (focus === 'text' && patterns === 'what') {
+    return 'html';
+  }
+  if (focus === 'func' && patterns === 'good') {
     return 'javascript';
   }
-  if (details === 'good' && solve === 'design') {
-    return 'css';
+  if (focus === 'func' && patterns === 'bad') {
+    return 'javascript';
+  }
+  if (focus === 'func' && patterns === 'what') {
+    return 'javascript';
   }
 }
 
