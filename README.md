@@ -2,7 +2,7 @@
 
 #### By _**Jonathan Liera**_
 
-#### _This project will show you my first time working with Javascript and radio formsThe user inputs information and by clikcing  submit button you get 3 different results._
+#### _This project will show you my first time working with Javascript and radio forms.The user inputs information and by clikcing  submit button you get 3 different results._
 
 ## Technologies Used
 
